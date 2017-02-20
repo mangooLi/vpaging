@@ -1,0 +1,42 @@
+{
+  "name": "vpaging",
+  "description": "Vue.js pagination component",
+  "version": "0.1.2",
+  "keywords": [
+    "pagination",
+    "vue",
+    "bootstrap"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matfish2/vue-pagination"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "vue": ">=1.0 <2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "stringify"
+    ]
+  },
+  "licenses": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build-min": "browserify index.js --s VuePagination | uglifyjs -c > dist/vue-pagination.min.js"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "jquery": "^2.1.4",
+    "karma": "^0.13.15",
+    "karma-browserify": "^4.4.1",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.6",
+    "stringify": "^3.2.0"
+  },
+  "_from": "vpaging@0.1.2",
+  "_resolved": "http://registry.npm.taobao.org/vpaging/download/vpaging-0.1.0.tgz"
+}

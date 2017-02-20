@@ -1,0 +1,41 @@
+
+
+<div class="row">
+
+  <div class="input-group col-md-3">
+    <span class="input-group-addon" id="basic-addon1"><a class="" id="first" href="javascript:void(0);" @click="firstPage()" v-bind:class="isFirst()?'disabled':''">
+       &lt;&lt;
+    </a></span>
+    <span class="input-group-addon" id="basic-addon1"><a class="" id="prev" href="javascript:void(0);" @click="prev()" v-bind:class="isFirst()?'disabled':''">
+       &lt;
+    </a></span>
+    
+    <input type="text" class="form-control vpInput"  aria-describedby="basic-addon1" v-model="page" @keyup='enterPage(page)'>
+
+    <span class="input-group-addon" id="basic-addon1">/{{totalPages}}</span>
+
+    <span class="input-group-addon" id="basic-addon1"><a href="javascript:void(0);" @click="next()" id="next" v-bind:class="isLast()?'disabled':''">
+       &gt;
+    </a></span>
+    
+    <span class="input-group-addon" id="basic-addon1"><a href="javascript:void(0);" @click="lastPage()" id="last" v-bind:class="isLast()?'disabled':''">
+       &gt;&gt;
+    </a></span>
+    
+    <div class="dropup col-md-1 vpDropup">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{perPage}}
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu perPage" aria-labelledby="dropdownMenu1">
+        <li class="listsPerPage" v-for="length in pagelength" @click="setPerPage(length)"><a href="javascript:void(0);">{{length}}</a></li>
+        
+        <!--<li class="listsPerPage"><a href="javascript:void(0);">20</a></li>
+        <li class="listsPerPage"><a href="javascript:void(0);">30</a></li>-->
+       
+      </ul>
+    </div>
+    <span class="input-group-addon " ><a id="black" href="javascript:void(0);" > lists/page</a></span>
+    
+  </div>
+</div>
